@@ -1,0 +1,39 @@
+{
+  "name": "@neezer/liz-socket",
+  "version": "0.0.0-semantically-released",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "author": "Evan Sherwood <evan@sherwood.io>",
+  "license": "MIT",
+  "private": false,
+  "peerDependencies": {
+    "@neezer/liz": "^1.0.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.0",
+    "nanoid": "^2.0.0",
+    "ramda": "^0.26.1",
+    "ws": "^6.1.2"
+  },
+  "devDependencies": {
+    "@neezer/liz": "^1.0.0",
+    "@types/debug": "^0.0.31",
+    "@types/nanoid": "^1.2.0",
+    "@types/ramda": "^0.25.44",
+    "@types/ws": "^6.0.1",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "semantic-release": "^15.13.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.2"
+  },
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rimraf dist"
+  }
+}
