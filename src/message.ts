@@ -13,7 +13,7 @@ export function handle(
   config: IConfig,
   socket: WebSocket,
   connectionId: string,
-  emit: Emit
+  emit: Emit<Action>
 ) {
   return (data: WebSocket.Data) => {
     try {
@@ -27,7 +27,7 @@ export function handle(
 function sendToBus(
   config: IConfig,
   data: WebSocket.Data,
-  emit: Emit,
+  emit: Emit<Action>,
   connectionId: string
 ) {
   const message = parse(data);
