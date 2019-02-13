@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": false,
   "peerDependencies": {
-    "@neezer/liz": "^1.0.0"
+    "@neezer/liz": "^1.6.1"
   },
   "dependencies": {
     "debug": "^4.1.0",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.5.0",
-    "@neezer/liz": "^1.0.0",
+    "@neezer/liz": "^1.6.1",
     "@types/debug": "^0.0.31",
     "@types/nanoid": "^1.2.0",
     "@types/ramda": "^0.25.44",
