@@ -45,16 +45,22 @@ export function create(bus: IMakeBus, config: IConfig) {
   const wss = new WebSocket.Server({ server }) as WebSocketServer;
   const broadcast = makeBroadcast(wss);
 
-  wss.on("connection", socket => {
+  wss.on("connection", (socket, request) => {
     debug("websocket connection established");
 
     const connectionId = nanoid();
     const close = makeUpdater<IClose>();
 
+    let { origin } = request.headers;
+
+    if (typeof origin !== "string") {
+      origin = undefined;
+    }
+
     const handle = {
       close: handleClose(close.emit),
       error: handleError(status),
-      message: handleMessages(config, socket, connectionId, emit),
+      message: handleMessages(config, socket, connectionId, emit, origin),
       replies: handleReplies(config, socket, stream, close.stream, connectionId)
     };
 
