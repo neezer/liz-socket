@@ -12,6 +12,7 @@
   "private": false,
   "peerDependencies": {
     "@neezer/action": "^1.2.0",
+    "@neezer/action-combinators": "^1.0.1",
     "@neezer/liz": "^1.6.1"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^7.5.0",
     "@neezer/action": "^1.2.0",
+    "@neezer/action-combinators": "^1.0.1",
     "@neezer/liz": "^1.6.1",
     "@types/debug": "^0.0.31",
     "@types/nanoid": "^1.2.0",
