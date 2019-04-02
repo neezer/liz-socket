@@ -75,7 +75,7 @@ export function create(bus: IMakeBus, config: IConfig) {
   handleBroadcasts(config, stream, broadcast);
   handleBanners(config, stream, banners, setBanners);
 
-  server.listen(config.port, () => {
+  server.listen(config.port, config.host, () => {
     status.emit(
       "online",
       `server listening for connections on :${config.port}`

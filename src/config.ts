@@ -4,6 +4,7 @@ export interface IConfig {
   broadcastPrefix: string;
   replyPrefix: string;
   port: number;
+  host: string;
   tls: {
     use: boolean;
     certPath?: string;
