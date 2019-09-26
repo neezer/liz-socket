@@ -32,6 +32,10 @@ function sendToBus(
 ) {
   const message = parse(data);
 
+  if (!message.type) {
+    return;
+  }
+
   const action = makeAction(config.appId)(
     message.type,
     message.payload,
@@ -45,7 +49,6 @@ function sendToBus(
   });
 
   debug("received message from connected client type=%s", action.type);
-
   emit(enhancedMessage);
 }
 
