@@ -19,7 +19,7 @@
     "debug": "^4.1.0",
     "nanoid": "^2.0.0",
     "ramda": "^0.26.1",
-    "ws": "^6.1.2"
+    "ws": "^7.4.6"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^7.5.0",
